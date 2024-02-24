@@ -34,7 +34,6 @@ void setup(void) {
   // Initialize display
   tft.init();
   tft.setRotation(3);
-  tft.invertDisplay(1);
   uint16_t calData[5] = {194, 3505, 278, 3548, 7};
   tft.setTouch(calData);
 
