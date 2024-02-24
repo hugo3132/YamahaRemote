@@ -41,13 +41,13 @@ public:
     
     tft.setTextColor(TFT_WHITE);
     if(lastInput != receiver.zone2Input) {
-      tft.fillRect(110, 10, 210, 25, TFT_MAROON);
+      tft.fillRect(110, 10, 210, 25, TFT_BLACK);
       tft.drawString("Input: " + receiver.zone2Input, 110, 10, 4);
       lastInput = receiver.zone2Input;      
     }
 
     if(lastVolume != receiver.zone2Volume) {
-      tft.fillRect(110, 60, 210, 25, TFT_MAROON);
+      tft.fillRect(110, 60, 210, 25, TFT_BLACK);
       tft.drawString("Volume: " + String(receiver.zone2Volume, 1) + " dB", 110, 60, 4);
       lastVolume = receiver.zone2Volume;      
     }
