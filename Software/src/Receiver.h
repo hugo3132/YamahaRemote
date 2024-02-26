@@ -1,6 +1,7 @@
 #pragma once
 #include <Arduino.h>
 #include <WiFiClient.h>
+#include "config.h"
 
 class Receiver {
 public:
@@ -89,6 +90,13 @@ public:
     i2 = answer.indexOf("</Power>", i1);
     if (i1 != -1 && i2 != -1) {
       zone2Power = answer.substring(i1 + 7, i2) == "On";
+    }
+
+    if(zone2Power || mainPower) {
+      digitalWrite(TFT_LED, 0);
+    }
+    else {
+      digitalWrite(TFT_LED, 1);
     }
 
     i1 = answer.indexOf("<Volume><Lvl><Val>");

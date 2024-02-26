@@ -12,7 +12,6 @@ TFT_eSPI tft; // Invoke custom library
   #error check the resolution is 320x240 in .pio\libdeps\az-delivery-devkit-v4\TFT_eSPI\TFT_Drivers\ILI9488_Defines.h
 #endif
 
-#define TFT_LED 22
 
 Receiver receiver;
 ViewBase* currentView;
@@ -39,7 +38,7 @@ void setup(void) {
 
   // Setup Coil output
   pinMode(TFT_LED, OUTPUT);
-  digitalWrite(TFT_LED, 0);
+  digitalWrite(TFT_LED, 1);
 
   // Start connecting
   tft.fillScreen(TFT_BLACK);
