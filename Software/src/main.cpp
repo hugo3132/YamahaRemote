@@ -38,7 +38,7 @@ void setup(void) {
 
   // Setup Coil output
   pinMode(TFT_LED, OUTPUT);
-  digitalWrite(TFT_LED, 1);
+  digitalWrite(TFT_LED, 0);
 
   // Start connecting
   tft.fillScreen(TFT_BLACK);
